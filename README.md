@@ -1,3 +1,7 @@
+This repository is related to a manuscript submited. The link of the manuscript will be shared once available. 
+
+------------------------------------------------------------------------------------
+
 Modeling code: ModelBuilder.py
 Predictor code: ModelPredictor.py
 ChemBL dataset: ChemBL.csv
