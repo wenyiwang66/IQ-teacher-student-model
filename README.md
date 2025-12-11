@@ -6,7 +6,8 @@ lombardo dataset with descriptors: lombardo_descriptors.csv
 ------------------------------------------------------------------------------------
 To run the codes: 
 ------------------------------------------------------------------------------------
-Conda environment –
+Conda environment
+
 Python version 3.8.11
 Packages:
 # Name Version                  
