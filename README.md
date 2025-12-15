@@ -1,16 +1,23 @@
 This repository is related to a manuscript submited. The link of the manuscript will be shared once available. 
 
 ------------------------------------------------------------------------------------
+Code and files availability:
 
 Modeling code: ModelBuilder.py
 Predictor code: ModelPredictor.py
 ChemBL dataset: ChemBL.csv
 lombardo dataset: lombardo.csv
+
+Additional files available at the Zenodo repository:
+https://zenodo.org/records/17943890?preview=1&token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjJmMzBmMWNlLTc2M2QtNDJkMy1iYzNmLWQ5YjYzMTdkMGM0YSIsImRhdGEiOnt9LCJyYW5kb20iOiJhOTkyYzc0OTFjYjFmMjFiYTdmZGExOThmNDkxYTE2OSJ9.aFQApFAEM8tMBmzLToSZlkjsQRGiDvRtiV5rgeAfd-U7r72hnzQviZpKGIf3AnEmOVDFKBY9oIEBDgIMigtDsg
 lombardo dataset with descriptors: lombardo_descriptors.csv
+ChEMBL dataset with descriptors: ChemBL_descriptors.csv
+Model file: model.sav
+ 
 ------------------------------------------------------------------------------------
 To run the codes: 
 ------------------------------------------------------------------------------------
-Conda environment
+Conda environment:
 
 Python version 3.8.11
 Packages:
