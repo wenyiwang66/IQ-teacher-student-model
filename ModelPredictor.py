@@ -20,7 +20,6 @@ import numpy as np
 from rdkit import DataStructs
 from rdkit.ML.Descriptors.MoleculeDescriptors import MolecularDescriptorCalculator
 from rdkit.Chem import AllChem as Chem
-import sklearn
 
 
 
@@ -96,28 +95,9 @@ def get_rdkit_descriptors(smiles_dataframe, smiles_title = 'SMILES', general=Tru
 
 
 
-
-#Process commandline options:
-# usage = "python ModelPredictor.py -i <input_sdf_file.sdf> -m <input_model_file.sav> -t <Prediction_Tag_Name> -c <cutoff_value> -o <Output_csv>\
-# Example: python ModelPredictor.py -i training.sdf -m model.sav -t cLogD -c 1 -o out.csv"
-# parser = OptionParser(usage=usage)
-# parser.add_option("-i","--in", dest="inputfile",help="Required: input sdf file")
-# parser.add_option("-m","--model", dest="modelfile",help="Required: model path e.g. model.sav")
-# parser.add_option("-t","--activitytag", dest="activity",help="Required: prediction tag")
-# parser.add_option("-o","--outputfile", dest="outputfile",help="Required: csv output file")
-# #optional inputs have default value
-# parser.add_option("-g","--calculate_general_descriptors", dest="general",help="calculate_general_descriptors - default True",default = "True")
-# parser.add_option("-f","--calculate_fingerprints", dest="fp",help="calculate_fingerprints: A(default) for atom type, F for feature typr, N for no fingerprints - default A" \
-# , default = "A",type="string")
-# parser.add_option("-r","--radius", dest="radius_num",help="fingerprints radius - default 2" ,default = 2)
-# parser.add_option("-b","--nbits", dest="nbits_used",help="fingerprints number of bits - default 2048" ,default = 2048)
-
-# options,args = parser.parse_args()
-
-
-inputfile = "/gne/data/smdd/isADME/wangw98/IQ/sharecode/lombardo.csv"
-modelfile = "/gne/data/smdd/isADME/wangw98/IQ/sharecode/model.sav"
-outputfile = "/gne/data/smdd/isADME/wangw98/IQ/sharecode/output.csv"
+inputfile = "lombardo.csv"
+modelfile = "model.sav"
+outputfile = "output.csv"
 activity = "logVdss"
 general = True
 fp = "A"
@@ -136,13 +116,8 @@ Y1obj = frame1[activity]
 Y = pd.to_numeric(Y1obj, errors='coerce')
 smiles_columndf_object = frame1['SMILES']
 smiles = pd.DataFrame(smiles_columndf_object)
-GNumber = frame1['GNumber']
+Drug = frame1['Drug']
 
-# smiles_columndf_object = frameAll['SMILES']
-# smiles = pd.DataFrame(smiles_columndf_object)
-# sdfFile=0
-# frameAll = 0
-# smiles_columndf_object = 0
 
 
 

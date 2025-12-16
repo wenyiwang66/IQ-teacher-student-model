@@ -1,4 +1,4 @@
-GNumber,SMILES,logVdss
+Drug,SMILES,logVdss
 Abacavir,Nc1nc(NC2CC2)c2ncn([C@H]3C=C[C@@H](CO)C3)c2n1,
 Acecainide (N-acetylprocainamide),CCN(CC)CCNC(=O)c1ccc(NC(C)=O)cc1,0.462397998
 Acetaminophen,CC(=O)Nc1ccc(O)cc1,-0.036212173

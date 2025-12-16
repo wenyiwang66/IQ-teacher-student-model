@@ -37,26 +37,6 @@ from rdkit.ML.Descriptors.MoleculeDescriptors import MolecularDescriptorCalculat
 from rdkit import RDConfig
 from rdkit.Chem import AllChem as Chem
 
-#Process commandline options:
-# usage = "python ModelBuilder.py -i <input_sdf_file.sdf> -o <output_model_file.sav> -t <Activity_Tag_Name> -n <ncpu> -m <nestimators> \
-# Example: python ModelBuilder.py -i training.sdf -o model.sav -t LogD -n 1 -m 100"
-# parser = OptionParser(usage=usage)
-# parser.add_option("-i","--in", dest="inputfile",help="Required: Training set sdf file")
-# parser.add_option("-o","--out", dest="outputfile",help="Required: Path to save trained model e.g. model.sav")
-# parser.add_option("-t","--activitytag", dest="activity",help="Required: tag name in sdf file containing activity modeled")
-# #optional inputs have default value
-# parser.add_option("-n","--ncpu", dest="ncpu",help="number of jobs used to parallalize training - default 1", default=1)
-# parser.add_option("-m","--nestimators", dest="nestimators",help="number of trees - default 100",default = 100)
-# parser.add_option("-g","--calculate_general_descriptors", dest="general",help="calculate_general_descriptors - default True",default = "True")
-# parser.add_option("-f","--calculate_fingerprints", dest="fp",help="calculate_fingerprints: A(default) for atom type, F for feature typr, N for no fingerprints - default A" \
-# , default = "A",type="string")
-# parser.add_option("-r","--radius", dest="radius_num",help="fingerprints radius - default 2" ,default = 2)
-# parser.add_option("-b","--nbits", dest="nbits_used",help="fingerprints number of bits - default 2048" ,default = 2048)
-# parser.add_option("-l","--logActivity", dest="log",help="log activity - default False",default = "False")
-# options,args = parser.parse_args()
-
-
-
 
 
 
@@ -139,12 +119,12 @@ def get_rdkit_descriptors(smiles_dataframe, smiles_title = 'SMILES', general=Tru
 
 
 
-inputfile = "/gne/data/smdd/isADME/QSARmodel/IQ20230628/ChemBL.csv"
+inputfile = "ChemBL.csv"
 
-inputfile = "/gne/data/smdd/isADME/QSARmodel/IQ20230628/ChemBL_descriptors.csv"
+inputfile = "ChemBL_descriptors.csv"
 
-#outputfile = "/gne/data/smdd/isADME/wangw98/IQ/sharecode/model.sav"
-outputfile = "/gne/data/smdd/isADME/QSARmodel/IQ20230628/model.sav"
+
+outputfile = "model.sav"
 
 activity = "logVdss"
 ncpu = 1
